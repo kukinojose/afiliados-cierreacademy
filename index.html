@@ -6,186 +6,41 @@
   <title>Sistema de Afiliados – 100% Cierre Academy</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-    /* Reset y estilos base */
-    body {
-      font-family: 'Inter', sans-serif, Arial, sans-serif;
-      background: #f7f9fc;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
-    main {
-      max-width: 720px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      padding: 25px 30px;
-    }
-    h1 {
-      color: #1d3557;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-    h3 {
-      color: #457b9d;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-    p {
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-    ul, ol {
-      margin-left: 20px;
-      color: #555;
-    }
-    a {
-      color: #e63946;
-      text-decoration: none;
-      word-break: break-word;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      margin: 25px 0;
-      border: none;
-      border-top: 1px solid #ddd;
-    }
-    button {
-      background-color: #e63946;
-      color: white;
-      border: none;
-      padding: 12px 22px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #d62828;
-    }
-    .progress-container {
-      text-align: center;
-      font-weight: 600;
-      color: #333;
-      font-size: 0.9rem;
-      user-select: none;
-    }
-    .progress-bar {
-      font-family: monospace;
-      font-size: 1.2rem;
-      margin-top: 8px;
-      letter-spacing: 3px;
-    }
-    /* Secciones ocultas */
-    section {
-      display: none;
-    }
-    section.active {
-      display: block;
-    }
-    /* Responsive */
-    @media (max-width: 480px) {
-      main {
-        margin: 15px;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 1.4rem;
-      }
-      button {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
 <body>
   <main>
-    <!-- Sección 1 -->
-    <section id="bienvenida" class="active">
-      <h1>Bienvenido/a al sistema de afiliados de 100% Cierre Academy.</h1>
-      <p>Aquí aprenderás todo lo necesario para empezar a generar ingresos promoviendo nuestra formación en ventas digitales.</p>
+    <h1>🟢 1. Empieza Aquí</h1>
+    <p><strong>Bienvenida</strong><br />
+      Bienvenido/a al sistema de afiliados de 100% Cierre Academy.<br /><br />
+      Aquí aprenderás todo lo necesario para empezar a generar ingresos promoviendo nuestra formación en ventas digitales.
+    </p>
+    <p><strong>✨ Qué vas a encontrar aquí:</strong></p>
+    <ul>
+      <li>Guiones de contacto</li>
+      <li>Recursos para redes</li>
+      <li>Agenda de trabajo</li>
+      <li>Formación inicial (corta y práctica)</li>
+      <li>Soporte continuo</li>
+    </ul>
+    <p><strong>Pasos Iniciales:</strong></p>
+    <ol>
+      <li>Únete al grupo de Telegram: <a href="https://t.me/+cZoInly1GpgwY2Nk" target="_blank" rel="noopener noreferrer">https://t.me/+cZoInly1GpgwY2Nk</a></li>
+      <li>Revisa el calendario y agenda una llamada si lo necesitas <a href="https://www.notion.so/SETTER-200a6d359b8580d28f59de718e07e00b?pvs=21" target="_blank" rel="noopener noreferrer">Aquí</a></li>
+      <li>Completa la formación básica.</li>
+    </ol>
+    <hr />
+    <button id="goToGuion">💬 2. Guion para Contactar Leads</button>
 
-      <h3>✨ Qué vas a encontrar aquí:</h3>
-      <ul>
-        <li>Guiones de contacto</li>
-        <li>Recursos para redes</li>
-        <li>Agenda de trabajo</li>
-        <li>Formación inicial (corta y práctica)</li>
-        <li>Soporte continuo</li>
-      </ul>
-
-      <h3>Pasos Iniciales:</h3>
-      <ol>
-        <li>Únete al grupo de Telegram: <a href="https://t.me/+cZoInly1GpgwY2Nk" target="_blank" rel="noopener">https://t.me/+cZoInly1GpgwY2Nk</a></li>
-        <li>Revisa el calendario y agenda una llamada si lo necesitas: <a href="https://www.notion.so/SETTER-1-200a6d359b8580d28f59de718e07e00b?pvs=21" target="_blank" rel="noopener">Link Notion</a></li>
-        <li>Completa la formación básica.</li>
-      </ol>
-
-      <hr>
-
-      <button data-target="guion">💬 2. Guion para Contactar Leads</button>
-
-      <div class="progress-container">
-        <p>🧭 Progreso del curso</p>
-        <p><strong>Página 1 de 7</strong></p>
-        <p class="progress-bar">▣□□□□□□□ <strong>14% completado</strong></p>
-      </div>
-    </section>
-
-    <!-- Sección 2 -->
-    <section id="guion">
-      <h1>💬 2. Guion para Contactar Leads</h1>
-
-      <h3>Guion completo + versión chuleta</h3>
-
-      <h4>Guion completo:</h4>
-      <p>Hola buenas soy (Nombre), vi que estás en la comunidad de emprendimiento y que ese mundo te interesa verdad?</p>
-      <p>Perfecto, lo digo porque tengo un proyecto relacionado con las ventas remotas y estoy buscando personas para darles una oportunidad, ¿actualmente a qué te estás dedicando?</p>
-      <p>( Conversación sobre su situación 1-2 minutos )</p>
-      <p>Ya ves, suena interesante. Y ahora mismo, ¿ya estás en la situación que deseas con el emprendimiento?</p>
-      <p>Entiendo, yo también estaba en tu situación hasta que empecé en el mundo de las ventas y me cambió la vida. ¿Tienes experiencia en el sector de las ventas?</p>
-      <p>Entonces tenemos una oportunidad que te puede interesar. Consiste en poder llegar a trabajar desde cualquier parte del mundo como closer de ventas. ¿Has escuchado antes sobre ello?</p>
-      <p>Me gustaría poder comentarte más tranquilamente para poder explicarte las condiciones de trabajo y la manera de empezar.</p>
-      <p>¿Te viene bien a X hora?</p>
-      <p>Perfecto, recuérdame tu nombre para dejarlo bien agendado, por favor.</p>
-
-      <h4>Chuleta rápida:</h4>
-      <ul>
-        <li>Saludo + referencia a comunidad</li>
-        <li>Presentación del proyecto</li>
-        <li>Pregunta sobre su situación actual</li>
-        <li>Reflexión sobre su punto actual vs. ideal</li>
-        <li>Historia breve personal</li>
-        <li>Introducción a la oportunidad</li>
-        <li>Pregunta si conoce las ventas remotas</li>
-        <li>Cierre con propuesta de llamada + agendado</li>
-      </ul>
-
-      <hr>
-
-      <button data-target="bienvenida">⬅️ Volver a Bienvenida</button>
-
-      <div class="progress-container">
-        <p>🧭 Progreso del curso</p>
-        <p><strong>Página 2 de 7</strong></p>
-        <p class="progress-bar">▣▣□□□□□□ <strong>28% completado</strong></p>
-      </div>
-    </section>
+    <div class="progress-container" aria-label="Progreso del curso">
+      <p><strong>🧭 Progreso del curso</strong></p>
+      <p><strong>Página 1 de 7</strong></p>
+      <p class="progress-bar" aria-hidden="true">▣□□□□□□□ <strong>14% completado</strong></p>
+    </div>
   </main>
 
   <script>
-    // Navegación simple entre secciones
-    document.querySelectorAll('button[data-target]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-        document.getElementById(targetId).classList.add('active');
-        window.scrollTo(0,0);
-      });
+    // Redirigir al pulsar el botón "Guion para Contactar Leads"
+    document.getElementById('goToGuion').addEventListener('click', function() {
+      window.location.href = 'guion.html'; // Cambia esta URL a la página que corresponda
     });
   </script>
 </body>
