@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formación Básica – 100% Cierre Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>🎓 3. Formación Básica</h1>
+    <p><strong>Duración total:</strong> 20-30 minutos</p>
+
+    <h3>Contenido sugerido:</h3>
+    <ol>
+      <li>Video: ¿Qué es un Closer y Setter?</li>
+      <li>Video: Cómo funciona el sistema</li>
+      <li>Video: Cómo se gana dinero</li>
+      <li>Buenas prácticas para contactar leads</li>
+    </ol>
+
+    <p><em>Formato:</em> Puedes subir los videos a YouTube, Loom o Google Drive y enlazarlos aquí.</p>
+
+    <hr />
+
+    <!-- Botones navegación -->
+    <div class="nav-buttons">
+      <button id="goBack">⬅ Volver a Guion para Contactar Leads</button>
+      <button id="goNext">Ir a Recursos para Compartir ➡</button>
+    </div>
+
+    <div class="progress-container" aria-label="Progreso del curso">
+      <p><strong>🧭 Progreso del curso</strong></p>
+      <p><strong>Página 3 de 7</strong></p>
+      <p class="progress-bar" aria-hidden="true">▣▣▣□□□□□□ <strong>43% completado</strong></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('goBack').addEventListener('click', function() {
+      window.location.href = 'guion.html';
+    });
+    document.getElementById('goNext').addEventListener('click', function() {
+      window.location.href = 'recursos.html';
+    });
+  </script>
+</body>
+</html>

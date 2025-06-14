@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seguimiento de Leads – 100% Cierre Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>📋 7. Seguimiento de Leads</h1>
+
+    <p>
+      Usa esta tabla para organizar y llevar el control de los leads con los que estás hablando.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Estado conversación</th>
+          <th>Experiencia en ventas</th>
+          <th>Agendada</th>
+          <th>Fecha contacto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ejemplo: Ana Pérez</td>
+          <td>Primera toma de contacto</td>
+          <td>Intermedia</td>
+          <td>Sí</td>
+          <td>2025-06-14</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Puedes replicar esta tabla en Notion, Google Sheets o Excel para mantener un seguimiento más detallado y ordenado.
+    </p>
+
+    <hr />
+
+    <!-- Botones navegación -->
+    <div class="nav-buttons">
+      <button id="goBack">⬅ Volver a Zona de Dudas</button>
+      <button id="goStart">Ir al Inicio 🔁</button>
+    </div>
+
+    <div class="progress-container" aria-label="Progreso del curso">
+      <p><strong>🧭 Progreso del curso</strong></p>
+      <p><strong>Página 7 de 7</strong></p>
+      <p class="progress-bar" aria-hidden="true">▣▣▣▣▣▣▣▣ <strong>100% completado</strong></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('goBack').addEventListener('click', function() {
+      window.location.href = 'telegram.html';
+    });
+    document.getElementById('goStart').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

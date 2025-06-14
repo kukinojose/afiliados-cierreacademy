@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recursos para Compartir – 100% Cierre Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>📥 4. Recursos para Compartir</h1>
+
+    <p>Material de apoyo:</p>
+    <ul>
+      <li>Imágenes para redes sociales <a href="https://drive.google.com/drive/folders/tu-carpeta" target="_blank" rel="noopener noreferrer">[Drive/descarga directa]</a></li>
+      <li>Textos para Instagram, WhatsApp y TikTok</li>
+      <li>Enlaces a formularios o páginas de agendado</li>
+    </ul>
+
+    <hr />
+
+    <!-- Botones navegación -->
+    <div class="nav-buttons">
+      <button id="goBack">⬅ Volver a Formación Básica</button>
+      <button id="goNext">Ir a Agenda y Calendario ➡</button>
+    </div>
+
+    <div class="progress-container" aria-label="Progreso del curso">
+      <p><strong>🧭 Progreso del curso</strong></p>
+      <p><strong>Página 4 de 7</strong></p>
+      <p class="progress-bar" aria-hidden="true">▣▣▣▣▣□□□□ <strong>57% completado</strong></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('goBack').addEventListener('click', function() {
+      window.location.href = 'formacion.html';
+    });
+    document.getElementById('goNext').addEventListener('click', function() {
+      window.location.href = 'agenda.html';
+    });
+  </script>
+</body>
+</html>

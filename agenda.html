@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenda y Calendario – 100% Cierre Academy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>🗓️ 5. Agenda y Calendario</h1>
+
+    <p>
+      Aquí puedes ver los horarios de formación, mentorías y llamadas de soporte.
+    </p>
+
+    <ul>
+      <li>
+        Calendario en Notion:  
+        <a href="https://www.notion.so/SETTER-200a6d359b8580d28f59de718e07e00b?pvs=21" target="_blank">
+          Ver calendario
+        </a>
+      </li>
+      <li>
+        Agéndate para llamadas personalizadas si necesitas apoyo extra.
+      </li>
+    </ul>
+
+    <p><strong>Recomendación:</strong> Apunta en tu calendario personal los eventos importantes.</p>
+
+    <hr />
+
+    <!-- Botones navegación -->
+    <div class="nav-buttons">
+      <button id="goBack">⬅ Volver a Recursos</button>
+      <button id="goNext">Ir a Grupo de Telegram ➡</button>
+    </div>
+
+    <div class="progress-container" aria-label="Progreso del curso">
+      <p><strong>🧭 Progreso del curso</strong></p>
+      <p><strong>Página 5 de 7</strong></p>
+      <p class="progress-bar" aria-hidden="true">▣▣▣▣▣▣□□ <strong>71% completado</strong></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('goBack').addEventListener('click', function() {
+      window.location.href = 'recursos.html';
+    });
+    document.getElementById('goNext').addEventListener('click', function() {
+      window.location.href = 'telegram.html';
+    });
+  </script>
+</body>
+</html>
