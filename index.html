@@ -4,358 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sistema de Afiliados – 100% Cierre Academy</title>
-  <link rel="icon" href="https://cierreacademy.netlify.app/favicon.ico" />
-  <style>
-    /* Variables de color similares a cierreacademy.netlify.app */
-    :root {
-      --primary: #2a74e4; /* Azul principal */
-      --secondary: #1d4ed8;
-      --bg: #fff;
-      --text-dark: #222;
-      --gray-light: #f5f7fb;
-      --gray-medium: #a1a8d5;
-      --gray-dark: #444;
-      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      --border-radius: 8px;
-      --transition: 0.3s ease;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    * {
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+    /* Reset y estilos base */
     body {
-      margin: 0; padding: 0;
-      background: var(--bg);
-      font-family: var(--font-family);
-      color: var(--text-dark);
-      line-height: 1.5;
-      scroll-behavior: smooth;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: 'Inter', sans-serif, Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #222;
     }
-
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgb(0 0 0 / 0.12);
-    }
-    header img.logo {
-      height: 36px;
-      user-select: none;
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin: 0 1rem;
-      flex-grow: 1;
-      white-space: nowrap;
-      user-select: none;
-    }
-    /* Botón hamburguesa móvil */
-    #menu-toggle {
-      display: none;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem;
-      margin-left: auto;
-    }
-    #menu-toggle span,
-    #menu-toggle span::before,
-    #menu-toggle span::after {
-      display: block;
-      background: white;
-      height: 3px;
-      width: 24px;
-      border-radius: 3px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-    #menu-toggle span::before,
-    #menu-toggle span::after {
-      content: '';
-      position: absolute;
-    }
-    #menu-toggle span::before {
-      top: -8px;
-    }
-    #menu-toggle span::after {
-      bottom: -8px;
-    }
-    #menu-toggle.open span {
-      background: transparent;
-    }
-    #menu-toggle.open span::before {
-      transform: rotate(45deg);
-      top: 0;
-    }
-    #menu-toggle.open span::after {
-      transform: rotate(-45deg);
-      bottom: 0;
-    }
-
-    nav#sidebar {
-      position: fixed;
-      top: 64px;
-      left: 0;
-      width: 250px;
-      height: calc(100vh - 64px);
-      background: var(--gray-light);
-      padding: 1rem;
-      overflow-y: auto;
-      box-shadow: 2px 0 10px rgb(0 0 0 / 0.08);
-      transition: transform 0.3s ease;
-      z-index: 999;
-    }
-    nav#sidebar a {
-      display: block;
-      color: var(--primary);
-      padding: 0.6rem 1rem;
-      margin-bottom: 0.4rem;
-      border-radius: var(--border-radius);
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color var(--transition);
-    }
-    nav#sidebar a:hover,
-    nav#sidebar a.active {
-      background: var(--primary);
-      color: white;
-    }
-
     main {
-      max-width: 900px;
-      margin: 2rem auto 3rem;
-      padding: 0 1rem;
-      margin-left: 270px; /* espacio para sidebar desktop */
+      max-width: 720px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 25px 30px;
     }
-
-    h2 {
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 2.5rem;
-      scroll-margin-top: 80px;
+    h1 {
+      color: #1d3557;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
     }
-    h2 .emoji {
-      font-size: 1.6rem;
+    h3 {
+      color: #457b9d;
+      margin-top: 25px;
+      margin-bottom: 10px;
     }
-    p, ul, ol, table {
-      margin-top: 0.6rem;
-      font-size: 1rem;
-      color: var(--gray-dark);
+    p {
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
     ul, ol {
-      padding-left: 1.5rem;
+      margin-left: 20px;
+      color: #555;
     }
     a {
-      color: var(--primary);
+      color: #e63946;
       text-decoration: none;
+      word-break: break-word;
     }
     a:hover {
       text-decoration: underline;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
+    hr {
+      margin: 25px 0;
+      border: none;
+      border-top: 1px solid #ddd;
     }
-    th, td {
-      border: 1px solid var(--gray-medium);
-      padding: 0.5rem 0.7rem;
-      text-align: left;
-    }
-    th {
-      background: var(--gray-light);
-      font-weight: 700;
-    }
-
-    /* Barra de progreso */
-    #progress-container {
-      background: var(--gray-light);
-      border-radius: 40px;
-      height: 24px;
-      margin: 1.5rem 0 2rem 0;
-      width: 100%;
-      max-width: 900px;
-      overflow: hidden;
-      box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
-    }
-    #progress-bar {
-      background: var(--primary);
-      height: 100%;
-      width: 0;
-      transition: width 0.5s ease-in-out;
-    }
-
-    /* Checklist pasos */
-    #progress-steps {
-      max-width: 900px;
-      margin: 0 auto 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    #progress-steps label {
-      background: var(--gray-light);
-      border-radius: var(--border-radius);
-      padding: 0.6rem 1rem;
-      flex: 1 1 calc(33% - 1rem);
-      display: flex;
-      align-items: center;
+    button {
+      background-color: #e63946;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #d62828;
+    }
+    .progress-container {
+      text-align: center;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.9rem;
       user-select: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-      min-width: 180px;
     }
-    #progress-steps label.completed {
-      background: var(--primary);
-      color: white;
+    .progress-bar {
+      font-family: monospace;
+      font-size: 1.2rem;
+      margin-top: 8px;
+      letter-spacing: 3px;
     }
-    .step-checkbox {
-      margin-right: 0.7rem;
-      transform: scale(1.25);
-      cursor: pointer;
+    /* Secciones ocultas */
+    section {
+      display: none;
     }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      main {
-        margin-left: 0;
-        padding: 0 1rem;
-      }
-      nav#sidebar {
-        position: fixed;
-        top: 64px;
-        left: 0;
-        width: 250px;
-        height: calc(100vh - 64px);
-        background: var(--gray-light);
-        padding: 1rem;
-        box-shadow: 2px 0 10px rgb(0 0 0 / 0.08);
-        transform: translateX(-260px);
-      }
-      nav#sidebar.open {
-        transform: translateX(0);
-      }
-      #menu-toggle {
-        display: block;
-      }
-    }
-
-    /* Video embed container */
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      padding-top: 25px;
-      height: 0;
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: var(--border-radius);
-    }
-
-    /* Botón reset progreso */
-    #reset-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--border-radius);
-      font-weight: 600;
-      cursor: pointer;
-      margin: 1rem auto 2rem;
+    section.active {
       display: block;
-      max-width: 220px;
-      transition: background-color 0.3s;
     }
-    #reset-btn:hover {
-      background: var(--secondary);
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        margin: 15px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
+  <main>
+    <!-- Sección 1 -->
+    <section id="bienvenida" class="active">
+      <h1>Bienvenido/a al sistema de afiliados de 100% Cierre Academy.</h1>
+      <p>Aquí aprenderás todo lo necesario para empezar a generar ingresos promoviendo nuestra formación en ventas digitales.</p>
 
-<header>
-  <img src="https://cierreacademy.netlify.app/logo.png" alt="Logo 100% Cierre Academy" class="logo" />
-  <h1>Sistema de Afiliados</h1>
-  <button id="menu-toggle" aria-label="Abrir menú navegación">
-    <span></span>
-  </button>
-</header>
+      <h3>✨ Qué vas a encontrar aquí:</h3>
+      <ul>
+        <li>Guiones de contacto</li>
+        <li>Recursos para redes</li>
+        <li>Agenda de trabajo</li>
+        <li>Formación inicial (corta y práctica)</li>
+        <li>Soporte continuo</li>
+      </ul>
 
-<nav id="sidebar" aria-label="Navegación del sistema de afiliados">
-  <a href="#step1-section" class="active">1. Empieza Aquí</a>
-  <a href="#step2-section">2. Guion para Contactar Leads</a>
-  <a href="#step3-section">3. Formación Básica</a>
-  <a href="#step4-section">4. Recursos para Compartir</a>
-  <a href="#step5-section">5. Agenda y Calendario</a>
-  <a href="#step6-section">6. Seguimiento de Leads</a>
-  <a href="#step7-section">7. Zona de Dudas y Comunidad</a>
-</nav>
+      <h3>Pasos Iniciales:</h3>
+      <ol>
+        <li>Únete al grupo de Telegram: <a href="https://t.me/+cZoInly1GpgwY2Nk" target="_blank" rel="noopener">https://t.me/+cZoInly1GpgwY2Nk</a></li>
+        <li>Revisa el calendario y agenda una llamada si lo necesitas: <a href="https://www.notion.so/SETTER-1-200a6d359b8580d28f59de718e07e00b?pvs=21" target="_blank" rel="noopener">Link Notion</a></li>
+        <li>Completa la formación básica.</li>
+      </ol>
 
-<main>
-  <!-- Aquí irá tu contenido... -->
-</main>
+      <hr>
 
-<script>
-  // Menú hamburguesa toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
+      <button data-target="guion">💬 2. Guion para Contactar Leads</button>
 
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    menuToggle.classList.toggle('open');
-  });
+      <div class="progress-container">
+        <p>🧭 Progreso del curso</p>
+        <p><strong>Página 1 de 7</strong></p>
+        <p class="progress-bar">▣□□□□□□□ <strong>14% completado</strong></p>
+      </div>
+    </section>
 
-  // Navegación activa según scroll
-  const links = sidebar.querySelectorAll('a');
-  window.addEventListener('scroll', () => {
-    let fromTop = window.scrollY + 80;
+    <!-- Sección 2 -->
+    <section id="guion">
+      <h1>💬 2. Guion para Contactar Leads</h1>
 
-    links.forEach(link => {
-      const section = document.querySelector(link.hash);
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
+      <h3>Guion completo + versión chuleta</h3>
+
+      <h4>Guion completo:</h4>
+      <p>Hola buenas soy (Nombre), vi que estás en la comunidad de emprendimiento y que ese mundo te interesa verdad?</p>
+      <p>Perfecto, lo digo porque tengo un proyecto relacionado con las ventas remotas y estoy buscando personas para darles una oportunidad, ¿actualmente a qué te estás dedicando?</p>
+      <p>( Conversación sobre su situación 1-2 minutos )</p>
+      <p>Ya ves, suena interesante. Y ahora mismo, ¿ya estás en la situación que deseas con el emprendimiento?</p>
+      <p>Entiendo, yo también estaba en tu situación hasta que empecé en el mundo de las ventas y me cambió la vida. ¿Tienes experiencia en el sector de las ventas?</p>
+      <p>Entonces tenemos una oportunidad que te puede interesar. Consiste en poder llegar a trabajar desde cualquier parte del mundo como closer de ventas. ¿Has escuchado antes sobre ello?</p>
+      <p>Me gustaría poder comentarte más tranquilamente para poder explicarte las condiciones de trabajo y la manera de empezar.</p>
+      <p>¿Te viene bien a X hora?</p>
+      <p>Perfecto, recuérdame tu nombre para dejarlo bien agendado, por favor.</p>
+
+      <h4>Chuleta rápida:</h4>
+      <ul>
+        <li>Saludo + referencia a comunidad</li>
+        <li>Presentación del proyecto</li>
+        <li>Pregunta sobre su situación actual</li>
+        <li>Reflexión sobre su punto actual vs. ideal</li>
+        <li>Historia breve personal</li>
+        <li>Introducción a la oportunidad</li>
+        <li>Pregunta si conoce las ventas remotas</li>
+        <li>Cierre con propuesta de llamada + agendado</li>
+      </ul>
+
+      <hr>
+
+      <button data-target="bienvenida">⬅️ Volver a Bienvenida</button>
+
+      <div class="progress-container">
+        <p>🧭 Progreso del curso</p>
+        <p><strong>Página 2 de 7</strong></p>
+        <p class="progress-bar">▣▣□□□□□□ <strong>28% completado</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Navegación simple entre secciones
+    document.querySelectorAll('button[data-target]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+        document.getElementById(targetId).classList.add('active');
+        window.scrollTo(0,0);
+      });
     });
-  });
-
-  // Progress bar y checklist interacción
-  const steps = document.querySelectorAll('.step-checkbox');
-  const progressBar = document.getElementById('progress-bar');
-  const resetBtn = document.getElementById('reset-btn');
-
-  function updateProgress() {
-    let completed = 0;
-    steps.forEach(cb => { if(cb.checked) completed++; });
-    const percent = (completed / steps.length) * 100;
-    progressBar.style.width = percent + '%';
-    progressBar.setAttribute('aria-valuenow', completed);
-    // Marcar etiquetas completadas
-    steps.forEach(cb => {
-      if (cb.checked) {
-        cb.parentElement.classList.add('
+  </script>
+</body>
+</html>
